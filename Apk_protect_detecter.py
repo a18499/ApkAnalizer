@@ -11,13 +11,19 @@ support_list = ["Bangcle",
 		"PayEgis",
 		"NQ",
 		"Ali"]
-Bangcle = ["libsecexe.x86.so"]
+Bangcle = ["libsecexe.x86.so",
+	    "libsecmain.x86.so",
+	     "libsecexe.so",
+	     "libsecmain.so"]
 QQ = []
-Baidu = []
+Baidu = ["libbaiduprotect.so"]
 protect_360 = []
-Ijiami = []
-APKProtect = []
-NAGA = []
+Ijiami = ["libexecmain.so",
+	"ijiami.dat",
+	"libexecmain.so "]
+APKProtect = ["libspkprotect2.so",
+		"libAPKProtect.so"]
+NAGA = ["libddog.so"]
 PayEgis = []
 NQ = []
 Ali = []
