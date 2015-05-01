@@ -19,6 +19,14 @@ NAGA = ["libddog.so"]
 PayEgis = ["libNSaferOnly.so"]
 NQ = ["libnqshield.so"]
 Ali = ["libmobisec.so"]
+"""
+Now support 
+網秦,梆梆
+愛加密,阿里
+通付盾,Apk_protect
+百度,娜迦
+360,QQ
+"""
 support_list = {"Bangcle":Bangcle,
 		"QQ":QQ,
 		"Baidu":Baidu,
@@ -49,17 +57,23 @@ class Apk_protect_detecter:
 				self.all_dir_name[dir] = ""
 
 	def check(self):
+		Result = ""
 		for each_support in support_list.keys():
 			for each_characteristic in support_list[each_support]:
 				if each_characteristic in self.all_file_name:
-					print(each_support)
-					
+					Result = each_support
+		os.system("rm -r -f "+self.scan_path+"temp/")
+		if Result == "":
+			return "APK is Not OB"
+		else:
+			return Result			
 
 
 if __name__ == "__main__":
-   
+     
     obj = Apk_protect_detecter(sys.argv[1],sys.argv[2])
     #obj.auto_scan(sys.argv[3])
     obj.Unzip()
     obj.get_all_file_name()
-    obj.check()
+    Result1 = obj.check()
+    print(Result1)
