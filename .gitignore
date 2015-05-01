@@ -1,3 +1,9 @@
 *.apk
 __pycache__
 temp
+APIMonitor-beta
+tools
+android-unpacker-master
+smali
+javaj-lib
+config
