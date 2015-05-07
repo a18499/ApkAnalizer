@@ -21,10 +21,10 @@ NQ = ["libnqshield.so"]
 Ali = ["libmobisec.so"]
 """
 Now support 
-網秦,梆梆
-愛加密,阿里
-通付盾,Apk_protect
-百度,娜迦
+網秦(NQ),梆梆
+愛加密,阿里(Ali)
+通付盾(PayEgis),Apk_protect
+百度,娜迦(NAGA)
 360,QQ
 """
 support_list = {"Bangcle":Bangcle,

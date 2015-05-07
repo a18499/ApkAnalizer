@@ -41,9 +41,19 @@ class Auto_scan():
 					OB.close()
 				except IOError:
 					print('File open error!!!')
+	def scan_package(self):
+		APK_tool = "/home/peter/apktool/apktool"
+		
+		for each_word in self.file_list:
+			os.system(APK_tool+" b"+" "+self.scan_path+each_word+"/")
+	def scan_zip(self):
+		ZIP_Path ="/media/peter/3812e316-a581-434a-98a2-3ea81a27fd10/Bangle_ZIP/"
+		for each_word in self.file_list:
+			os.system("zip -r "+ZIP_Path+each_word+".zip "+self.scan_path+each_word+"/")
+		
 if __name__ == "__main__":
 	out_list =[]
 	obj = Auto_scan(sys.argv[1])
-	out_list = obj.start_scan_OB()
+	out_list = obj.scan_zip()
 	for each_file in out_list:
 		print(each_file)

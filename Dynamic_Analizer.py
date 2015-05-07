@@ -14,4 +14,4 @@ class Dynamic_Analizer():
 	 
 if __name__ == '__main__':
 	obj = Dynamic_Analizer(sys.argv[1])
-	obj.app_OB()
+	obj.repackage()
