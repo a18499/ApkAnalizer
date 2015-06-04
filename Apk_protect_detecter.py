@@ -49,6 +49,7 @@ class Apk_protect_detecter:
 		
 	def Unzip(self):
 		os.system("unzip "+self.apkPath+" -d "+self.apkUnzipPath)
+		
 	def get_all_file_name(self):
 		for root, dirs, files in os.walk(self.apkUnzipPath):
 			for file in files:
